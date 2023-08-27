@@ -1,36 +1,134 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* Reset default margins and paddings */
+body, h1, p, ul, li, footer {
     margin: 0;
-    background-color: #f0f0f0;
+    padding: 0;
 }
 
-.connect-four {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 5px;
-    width: 420px;
-    height: 420px;
-    border: 2px solid #333;
-    background-color: #444;
+/* Apply a basic font to the entire page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Center the content vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-color: #66CC66; */
+    background: content-box radial-gradient(#31e84d, skyblue);
+}
+
+
+
+h1 {
+    font-size: 180px;
+    color: #48abe0;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px darkslategray;
+    animation: shadow-pulse 3s infinite, fade-in 1s ease-out, color-change 4s infinite;
+}
+
+@keyframes shadow-pulse {
+    0%, 100% {
+        text-shadow: 0 2px 4px darkslategray;
+    }
+    50% {
+        text-shadow: 0 8px 16px darkslategray;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: #48abe0;
+    }
+    50% {
+        color: #65b9e6;
+    }
+    100% {
+        color: #48abe0;
+    }
+}
+
+
+
+
+
+/* Style the buttons */
+.buttons {
+    display: flex;
+    /* Remove flex-direction: column; */
+    align-items: center;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.round {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #336699;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.round:hover {
+    background-color: #225577;
+    transform: scale(1.05);
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #777;
+    text-decoration: none;
+    font-weight: bold; /* Add bold font weight to the link */
+    border-bottom: 1px dashed #777; /* Add a dashed underline on normal state */
+    transition: color 0.3s, border-bottom-color 0.3s; /* Add smooth transition effects */
+}
+
+footer a:hover {
+    color: #333;
+    border-bottom-color: #333; /* Darken the dashed underline on hover */
+}
+
+button.round {
+    background-color: #48abe0;
+    color: white;
+    border: none;
     padding: 5px;
-}
-
-.cell {
-    width: 60px;
-    height: 60px;
+    font-size: 31px;
+    height: 130px;
+    width: 130px;
+    box-shadow: 0 2px 4px darkslategray;
     border-radius: 50%;
-    background-color: #ddd;
 }
 
-/* Add different classes for player pieces (e.g., .player1, .player2) */
-.player1 {
-    background-color: red;
+button.round:hover {
+    background-color: #418cbf;
 }
 
-.player2 {
-    background-color: yellow;
+button.round:active {
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
 }
