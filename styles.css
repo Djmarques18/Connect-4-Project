@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.connect-four {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    width: 420px;
+    height: 420px;
+    border: 2px solid #333;
+    background-color: #444;
+    padding: 5px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+/* Add different classes for player pieces (e.g., .player1, .player2) */
+.player1 {
+    background-color: red;
+}
+
+.player2 {
+    background-color: yellow;
+}
