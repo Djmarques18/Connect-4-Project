@@ -214,7 +214,7 @@ function displayWinPopup(winningColor) {
     const closePopupButton = popup.querySelector("#close-popup");
 
     playAgainButton.addEventListener("click", () => {
-        window.location.href = "frontpage.html";
+        window.location.href = "index.html";
         isPopupDisplayed = false;
     });
 
