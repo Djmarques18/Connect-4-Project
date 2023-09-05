@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const restartButton = document.getElementById("restart");
 
     goHomeButton.addEventListener("click", () => {
-        window.location.href = "frontpage.html";
+        window.location.href = "index.html";
     });
 
 
