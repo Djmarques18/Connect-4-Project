@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.addEventListener("click", handleCellClick);
 
     goHomeButton.addEventListener("click", () => {
-        window.location.href = "frontpage.html";
+        window.location.href = "index.html";
     });
 
     restartButton.addEventListener("click", function () {
